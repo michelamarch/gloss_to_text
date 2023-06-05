@@ -23,6 +23,14 @@ class myTokenizer():
             self.pad_token_id = tokenizer.pad_token_id
             # save
             tokenizer.save_pretrained(args.checkpoint_path)
+        elif args.vocab == 'german':
+            tokenizer = AutoTokenizer.from_pretrained("dbmdz/bert-base-german-cased")
+            # tokenizer = AutoTokenizer.from_pretrained(args.config_name)
+            self.tokenizer = tokenizer
+            self.sep_token_id = tokenizer.sep_token_id
+            self.pad_token_id = tokenizer.pad_token_id
+            # save
+            tokenizer.save_pretrained(args.checkpoint_path)
         else: 
             # load vocab from the path
             print('#'*30, 'load vocab from', args.vocab)
