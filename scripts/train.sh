@@ -1,4 +1,4 @@
-python -m torch.distributed.launch --nproc_per_node=4 --master_port=12233 --use_env run_train.py \
+python3 -m torch.distributed.launch --nproc_per_node=4 --master_port=12233 --use_env run_train.py \
 --diff_steps 20 \
 --lr 0.0001 \
 --learning_steps 500 \
@@ -8,8 +8,8 @@ python -m torch.distributed.launch --nproc_per_node=4 --master_port=12233 --use_
 --hidden_dim 128 \
 --bsz 2048 \
 --dataset gloss \
---data_dir ../datasets/gloss_data \
---vocab bert \
+--data_dir datasets/gloss_data \
+--vocab german \
 --seq_len 128 \
 --schedule_sampler lossaware \
 --notes test-qqp

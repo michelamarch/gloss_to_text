@@ -60,7 +60,7 @@ if __name__ == '__main__':
 
     COMMANDLINE = f" OPENAI_LOGDIR={Model_FILE}  " \
                   f"TOKENIZERS_PARALLELISM=false " \
-                  f"python train.py   " \
+                  f"python3 train.py   " \
                   f"--checkpoint_path {Model_FILE} " \
                   f"--dataset {args.dataset} --data_dir {args.data_dir} --vocab {args.vocab} --use_plm_init {args.use_plm_init} " \
                   f"--lr {args.lr} " \
